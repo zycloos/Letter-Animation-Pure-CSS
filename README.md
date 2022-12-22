@@ -1,6 +1,6 @@
 # Letter-Animation
 
-A Letter Animation
+A Letter Animation (Small Project)
 
 HTML:
 
