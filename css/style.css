@@ -1,0 +1,280 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.frame {
+    background-color: gainsboro;
+    width: 800px;
+    height: 600px;
+}
+
+.frame {
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    
+}
+
+.frame *,
+.frame *::before,
+.frame *::after {
+    position: absolute;
+    content: '';
+}
+
+.letter-back {
+    top: 150px;
+    left: 150px;
+    width: 500px;
+    height: 302px;
+    background-color: rgb(0, 73, 102);
+    position: relative;
+    animation: back-animation 5s ease-in-out infinite;
+}
+
+.letter-rectangle-top {
+    top: 150px;
+    left: 150px;
+    border-style: solid;
+    border-width: 150px 250px;
+    border-color: rgb(0, 100, 139) transparent transparent transparent;
+    animation: top-animation 5s ease-in-out infinite;
+}
+
+.letter-rectangle-flipped {
+    visibility: hidden;
+    top: -120px;
+    left: 150px;
+    border-style: solid;
+    border-width: 150px 250px;
+    scale: -1;
+    border-color: rgb(0, 135, 189) transparent transparent transparent;
+    animation: flipped-animation 5s ease-in-out infinite;
+}
+
+.letter-rectangle-bottom {
+    top: 152px;
+    left: 150px;
+    border-style: solid;
+    border-width: 150px 250px;
+    border-color: transparent transparent rgb(0, 110, 153) transparent;
+    animation: bottom-animation 5s ease-in-out infinite;
+}
+
+.letter-rectangle-left {
+    top: 152px;
+    left: 150px;
+    border-style: solid;
+    border-width: 150px 250px;
+    border-color: transparent transparent transparent rgb(0, 90, 126);
+    animation: left-animation 5s ease-in-out infinite;
+}
+
+.letter-rectangle-right {
+    top: 152px;
+    left: 150px;
+    border-style: solid;
+    border-width: 150px 250px;
+    border-color: transparent rgb(0, 120, 163) transparent transparent;
+    animation: right-animation 5s ease-in-out infinite;
+}
+
+.letter {
+    top: 190px;
+    left: 200px;
+    width: 400px;
+    height: 200px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    animation: letter-animation 5s ease-in-out infinite;
+}
+
+.info1 {
+    width: 200px;
+    height: 30px;
+    margin: 20px;
+    background-color: lightcoral;
+    border-radius: 20px;
+}
+
+.info2 {
+    width: 150px;
+    height: 30px;
+    margin: 20px;
+    margin-top: 60px;
+    background-color: lightcoral;
+    border-radius: 20px;
+}
+
+.info3 {
+    width: 50px;
+    height: 30px;
+    margin: 20px;
+    margin-left: 300px;
+    background-color: lightcoral;
+    border-radius: 20px;
+}
+
+.info4 {
+    width: 350px;
+    height: 20px;
+    margin: 20px;
+    margin-top: 100px;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 20px;
+}
+
+.info5 {
+    width: 150px;
+    height: 20px;
+    margin: 20px;
+    margin-top: 130px;
+    background-color: lightgreen;
+    opacity: 0.5;
+    border-radius: 20px;
+}
+
+.info6 {
+    width: 230px;
+    height: 20px;
+    margin: 20px;
+    margin-top: 160px;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 20px;
+}
+
+@keyframes back-animation {
+    0% {
+        top: 150px;
+    }
+
+    25% {}
+
+    50% {
+        top: 180px;
+        background-color: rgb(0, 105, 146);
+    }
+
+    75% {}
+
+    100% {
+        top: 150px;
+    }
+}
+
+@keyframes top-animation {
+    0% {}
+
+    25% {
+        visibility: hidden;
+    }
+
+    50% {
+        visibility: hidden;
+        scale: -1;
+        top: -119px;
+        border-color: rgb(0, 135, 189) transparent transparent transparent;
+    }
+
+    75% {
+        visibility: hidden;
+    }
+
+    100% {}
+}
+
+@keyframes flipped-animation {
+    0% {
+        top: 150px;
+    }
+
+    25% {}
+
+    50% {
+        top: -120px;
+        visibility: visible;
+    }
+
+    75% {}
+
+    100% {
+        top: 150px;
+    }
+}
+
+@keyframes bottom-animation {
+    0% {
+        top: 150px;
+    }
+
+    25% {}
+
+    50% {
+        top: 180px;
+    }
+
+    75% {}
+
+    100% {
+        top: 150px;
+    }
+}
+
+@keyframes left-animation {
+    0% {
+        top: 150px;
+    }
+
+    25% {}
+
+    50% {
+        top: 180px;
+    }
+
+    75% {}
+
+    100% {
+        top: 150px;
+    }
+}
+
+@keyframes right-animation {
+    0% {
+        top: 150px;
+    }
+
+    25% {}
+
+    50% {
+        top: 180px;
+    }
+
+    75% {}
+
+    100% {
+        top: 150px;
+    }
+}
+
+@keyframes letter-animation {
+    0% {
+        top: 190px;
+    }
+
+    25% {}
+
+    50% {
+        top: 130px;
+        width: 420px;
+    }
+
+    75% {}
+
+    100% {}
+}
